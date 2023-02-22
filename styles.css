@@ -125,7 +125,7 @@ nav ul li {
 }
 
 #Queue,
-.addtoqueue, #addToPlaylist {
+.addtoqueue, #addToPlaylist, #removePlaylist {
   background-color: #4bea60;
   border: none;
   color: black;
@@ -138,10 +138,7 @@ nav ul li {
 }
 
 #Queue:hover,
-.addtoqueue:hover {
-  background-color: #ff5757b9;
-}
-#addToPlaylist:hover {
+.addtoqueue:hover,#removePlaylist:hover, #addToPlaylist:hover {
   background-color: #ff5757b9;
 }
 
@@ -201,7 +198,7 @@ nav ul li {
 .section-side {
   display: flex;
   flex-grow: 1;
-  background-color: #dcbc9f;;
+  background-color: #e7bca0;;
   height: auto;
 }
 .current-time,
@@ -221,7 +218,7 @@ nav ul li {
   border-radius: 10px;
   margin: 20px auto;
   text-align: center;
-  background-color: rgb(69, 67, 67);
+  background-color: rgb(216, 178, 178);
   color: white;
   height: 50%;
   width: 20%;
@@ -251,8 +248,8 @@ nav ul li {
 }
 
 #searchsong:hover {
-  background-color: #f8ede3;
-  border-color: black;
+  background-color: #be793a;
+  color: white;
 }
 
 

@@ -282,4 +282,18 @@ const addToPlaylist = () => {
     }
   }
 };
+const remove = () => {
+  const currentsong = music_list[track_index];
+  if (localStorage) {
+    let data = JSON.parse(localStorage.removeItem("playlist"));
+    console.log(data, "data");
+    if (!data) {
+      data = [];
+    }
+    if (!data.find((item) => item.id == currentsong.id)) {
+      data.push(currentsong);
+      localStorage.setItem("playlist", JSON.stringify(data));
+    }
+  }
+};
 
