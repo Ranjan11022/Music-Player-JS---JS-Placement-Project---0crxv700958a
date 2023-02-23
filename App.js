@@ -188,6 +188,7 @@ player.addEventListener("timeupdate", () => {
   myProgressBar.value = progress;
 });
 
+// Scroll Seekbar
 myProgressBar.addEventListener("change", () => {
   player.currentTime =
     (myProgressBar.value * player.duration) / 100;
