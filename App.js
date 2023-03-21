@@ -223,6 +223,7 @@ function showQueue() {
     child.appendChild(songname);
     child.appendChild(arname);
     child.style.padding = "0.5rem";
+    child.style.width = " 35vh ";
     child.onclick = () => {
       track_index = index;
       now_playing.innerText = item.name;
@@ -232,17 +233,17 @@ function showQueue() {
   });
 }
 
-// seaching song
+// searching song
 searchSongs.onkeydown = (event) => {
-  const inputData = event.target.value.toLowerCase().split(" ").join("");
+  const inputData = event.target.value.toLowerCase().split("").join("");
   const sd = document.getElementById("sd");
-  if (inputData) {
+  if (inputData.length >= 2) {
     const searchedData = music_list.filter((item) =>
       item.name
         .toLowerCase()
-        .split(" ")
+        .split("")
         .join("")
-        .includes(event.target.value.toLowerCase().split(" ").join(""))
+        .includes(event.target.value.toLowerCase().split("").join(""))
     );
     sd.innerHTML = "";
     searchedData?.forEach((item, index) => {
@@ -256,6 +257,7 @@ searchSongs.onkeydown = (event) => {
       child.appendChild(songname);
       child.appendChild(arname);
       child.style.padding = "0.5rem";
+      child.style.width = " 35vh ";
       child.onclick = () => {
         track_index = index;
         now_playing.innerText = item.name;
